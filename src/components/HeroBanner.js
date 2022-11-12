@@ -1,5 +1,5 @@
 import { Button, Typography } from '@mui/material'
-import { Box, fontSize } from '@mui/system'
+import { Box } from '@mui/system'
 import React from 'react';
 import HeroBannerImage from '../assets/images/banner.png'
 
