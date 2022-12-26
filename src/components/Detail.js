@@ -21,24 +21,25 @@ const Detail = ({exerciseDetail}) => {
       icon: EquipmentImage,
       name: equipment,
     },
-]
+];
   return (
     <Stack gap='60px' sx={{flexDirection: {lg: 'row'}, p: '20px', alignItems:'center'}}>
       <img src={gifUrl} alt= {name} loading='lazy' className='detail-image'/>
-     <Stack sx={{gap: {lg: '35px', sx: '20px'}}}>
-      <Typography variant='h3'>{name}</Typography>
-      <Typography variant='h6'>
-        Exercises keep you strong. {name} {` `} 
-        is one of the best exercises to target your {target}.
+     <Stack sx={{gap: {lg: '35px', xs: '20px'}}}>
+      <Typography sx={{fontSize: {lg: '64px', xs: '30px'}}} fontWeight={700} textTransform="capitalize">{name}</Typography>
+      <Typography sx={{fontSize:{lg: '24px', xs: '18px'}}} color="#4f4c4c">
+        Exercises keep you strong. {' '} 
+        <span style={{textTransform: 'capitalize'}}>{name}</span>
+        is one of the best <br/>exercises to target your {' '}<br/>
         It will help you improve your mood and gain energy.
       </Typography>
 
-        {extraDetail.map((item)=>(
+        {extraDetail?.map((item)=>(
                <Stack key={item.name} direction='row' gap='24px' alignItems='center'>
                 <Button sx={{background: '#fff2db', borderRadius: '50%', width:'100px', height: '100px'}}>
                   <img src={item.icon} alt={bodyPart} style={{width: '50px', height: '50px'}}/>
                   </Button>
-                  <Typography textTransform="capitalize" variant='h5'>
+                  <Typography textTransform="capitalize" sx={{fontSize: {lg: '30px', xs: '20px'}}}>
                     {item.name}
                   </Typography>
                 
